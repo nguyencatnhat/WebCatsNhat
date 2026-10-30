@@ -1,160 +1,137 @@
 
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CATNHAT.DEV | Personal Website</title>
-
+    <meta name="theme-color" content="#f2f2e9">
+    <meta name="description" content="Portfolio cá nhân của Cát Nhật, sinh viên Công nghệ thông tin yêu thích lập trình và phát triển phần mềm.">
+    <title>Cát Nhật — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- THANH MENU -->
-    <header>
-        <a href="#home" class="logo">CATNHAT<span>.DEV</span></a>
-
-        <nav>
-            <a href="#home">Trang chủ</a>
+    <header class="site-header">
+        <a href="#home" class="logo" aria-label="Cát Nhật, về đầu trang">CATNHAT<span>.DEV</span></a>
+        <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
             <a href="#about">Giới thiệu</a>
             <a href="#skills">Kỹ năng</a>
             <a href="#projects">Dự án</a>
-            <a href="#contact">Liên hệ</a>
+            <a href="#contact" class="nav-contact">Liên hệ <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
-    <!-- TRANG CHỦ -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <div class="avatar">
-                CN
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="status-dot"></span> SINH VIÊN CÔNG NGHỆ THÔNG TIN</p>
+                <h1>Xin chào,<br>mình là <span>Cát Nhật.</span></h1>
+                <p class="hero-description">Mình yêu thích lập trình, công nghệ và biến những ý tưởng nhỏ thành sản phẩm hữu ích.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button button-primary">Xem dự án <span aria-hidden="true">↘</span></a>
+                    <a class="text-link" href="https://github.com/nguyencatnhat" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="hero-note">Đang học hỏi mỗi ngày, từng dòng code một.</p>
             </div>
-
-            <p class="welcome">WELCOME TO MY WEBSITE</p>
-
-            <h1>
-                Xin chào, mình là
-                <span>Cát Nhật</span>
-            </h1>
-
-            <h2>I'm a <span class="typing">Developer</span></h2>
-
-            <p class="description">
-                Sinh viên Công nghệ thông tin.
-                Đam mê lập trình, công nghệ
-                và phát triển phần mềm.
-            </p>
-
-            <a href="#about" class="button">
-                Khám phá website
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- GIỚI THIỆU -->
-    <section id="about" class="section">
-
-        <h2 class="section-title">Giới thiệu</h2>
-
-        <div class="content">
-            <p>
-                Xin chào! Mình là Cát Nhật.
-                Mình yêu thích lập trình và công nghệ.
-                Đây là nơi lưu trữ các dự án,
-                kỹ năng và hành trình học tập của mình.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- KỸ NĂNG -->
-    <section id="skills" class="section">
-
-        <h2 class="section-title">Kỹ năng</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>C++</h3>
-                <p>Lập trình hướng đối tượng.</p>
+            <div class="hero-visual reveal">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85" alt="Góc làm việc với laptop và mã nguồn" fetchpriority="high">
+                </div>
+                <div class="visual-label"><span>01</span><span>HỌC · THỬ · LÀM</span></div>
+                <span class="visual-stamp" aria-hidden="true">CN</span>
             </div>
+            <a class="scroll-cue" href="#about"><span></span> CUỘN ĐỂ KHÁM PHÁ</a>
+        </section>
 
-            <div class="card">
-                <h3>C#</h3>
-                <p>Lập trình phần mềm và Unity.</p>
+        <section class="about section" id="about">
+            <div class="section-kicker reveal"><span>01 / VỀ MÌNH</span><span class="rule"></span></div>
+            <div class="about-grid">
+                <h2 class="section-heading reveal">Tò mò với<br>mọi thứ <em>có thể</em><br>được tạo ra.</h2>
+                <div class="about-copy reveal">
+                    <p class="about-lead">Xin chào! Mình là Cát Nhật, sinh viên Công nghệ thông tin và luôn hào hứng khi được tự tay xây dựng một điều gì đó.</p>
+                    <p>Mình đang khám phá lập trình phần mềm, phát triển web và game. Portfolio này là nơi mình lưu lại những dự án, kỹ năng và hành trình học tập của mình.</p>
+                    <a class="text-link" href="#skills">Một chút về những gì mình học <span aria-hidden="true">↓</span></a>
+                </div>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>HTML & CSS</h3>
-                <p>Thiết kế website.</p>
+        <section class="skills section" id="skills">
+            <div class="section-kicker reveal"><span>02 / CÔNG CỤ CỦA MÌNH</span><span class="rule"></span></div>
+            <div class="section-intro reveal">
+                <h2 class="section-heading">Kỹ năng &<br><em>công nghệ.</em></h2>
+                <p>Mỗi công nghệ là một cơ hội để học cách giải quyết vấn đề theo một góc nhìn mới.</p>
             </div>
-
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>Lập trình tương tác website.</p>
+            <div class="skills-grid">
+                <article class="skill-item reveal"><span class="skill-number">01</span><h3>C++</h3><p>Lập trình hướng đối tượng</p></article>
+                <article class="skill-item reveal"><span class="skill-number">02</span><h3>C#</h3><p>Lập trình phần mềm và Unity</p></article>
+                <article class="skill-item reveal"><span class="skill-number">03</span><h3>HTML & CSS</h3><p>Thiết kế và xây dựng website</p></article>
+                <article class="skill-item reveal"><span class="skill-number">04</span><h3>JavaScript</h3><p>Tạo tương tác cho website</p></article>
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-    <!-- DỰ ÁN -->
-    <section id="projects" class="section">
-
-        <h2 class="section-title">Dự án của mình</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Hotel Management</h3>
-                <p>Phần mềm quản lý khách sạn bằng C++.</p>
+        <section class="projects section" id="projects">
+            <div class="section-kicker reveal"><span>03 / ĐÃ VÀ ĐANG LÀM</span><span class="rule"></span></div>
+            <div class="section-intro projects-intro reveal">
+                <h2 class="section-heading">Một vài<br><em>dự án.</em></h2>
+                <p>Từ bài tập đầu tiên đến những ý tưởng mình muốn phát triển thêm.</p>
             </div>
-
-            <div class="card">
-                <h3>Personal Website</h3>
-                <p>Website cá nhân bằng HTML, CSS, JavaScript.</p>
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="project-image"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Khách sạn bên hồ nhìn từ bên ngoài" loading="lazy"><span class="project-index">01</span></div>
+                    <div class="project-meta"><span>C++</span><span>PHẦN MỀM</span></div>
+                    <h3>Hotel Management</h3>
+                    <p>Phần mềm quản lý khách sạn bằng C++.</p>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85" alt="Màn hình phân tích dữ liệu trên máy tính" loading="lazy"><span class="project-index">02</span></div>
+                    <div class="project-meta"><span>HTML · CSS · JS</span><span>WEB</span></div>
+                    <h3>Personal Website</h3>
+                    <p>Website cá nhân để giới thiệu kỹ năng và các dự án.</p>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-image"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85" alt="Máy chơi game cổ điển với tay cầm" loading="lazy"><span class="project-index">03</span></div>
+                    <div class="project-meta"><span>UNITY</span><span>ĐANG HỌC</span></div>
+                    <h3>Game Development</h3>
+                    <p>Tìm hiểu phát triển game và trải nghiệm tương tác bằng Unity.</p>
+                </article>
             </div>
+        </section>
 
-            <div class="card">
-                <h3>Game Development</h3>
-                <p>Tìm hiểu phát triển game bằng Unity.</p>
+        <section class="contact" id="contact">
+            <div class="contact-inner reveal">
+                <p class="eyebrow">04 / KẾT NỐI</p>
+                <h2>Cùng bắt đầu<br>một <em>cuộc trò chuyện?</em></h2>
+                <a class="button button-light" href="https://github.com/nguyencatnhat" target="_blank" rel="noreferrer">Ghé thăm GitHub <span aria-hidden="true">↗</span></a>
+                <div class="contact-details" aria-label="Thông tin liên hệ">
+                    <a class="contact-detail" href="mailto:nguyencatnhat7777@gmail.com">
+                        <span>Email</span>
+                        <strong>nguyencatnhat7777@gmail.com</strong>
+                    </a>
+                    <a class="contact-detail" href="tel:+84918811752">
+                        <span>Điện thoại</span>
+                        <strong>0918 811 752</strong>
+                    </a>
+                    <a class="contact-detail" href="https://nguyencatnhat.github.io/WebCatsNhat/" target="_blank" rel="noreferrer">
+                        <span>Website</span>
+                        <strong>nguyencatnhat.github.io/WebCatsNhat</strong>
+                    </a>
+                </div>
             </div>
+            <span class="contact-mark" aria-hidden="true">CN.</span>
+        </section>
+    </main>
 
-        </div>
-
-    </section>
-
-    <!-- LIÊN HỆ -->
-    <section id="contact" class="section">
-
-        <h2 class="section-title">Liên hệ</h2>
-
-        <div class="content">
-            <p>GitHub:
-                <a href="https://github.com/nguyencatnhat">
-                    GitHub cá nhân
-                </a>
-            </p>
-
-            <p>Email: Thêm email của bạn tại đây.</p>
-
-            <p>Facebook: Thêm liên kết Facebook tại đây.</p>
-        </div>
-
-    </section>
-
-    <footer>
-        © 2026 CATNHAT.DEV - Personal Website
+    <footer class="site-footer">
+        <a href="#home" class="logo">CATNHAT<span>.DEV</span></a>
+        <p>Thiết kế và phát triển bởi Cát Nhật · <span id="current-year">2026</span></p>
+        <a class="back-to-top" href="#home">LÊN ĐẦU TRANG ↑</a>
     </footer>
-
     <script src="script.js"></script>
-
 </body>
 </html>
