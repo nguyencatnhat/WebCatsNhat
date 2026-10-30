@@ -2,98 +2,356 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website cá nhân - Cát Nhật</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cát Nhật | Developer Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b1020;
-            color: white;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        header {
-            padding: 25px;
-            background: #151b30;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #080816;
+    color: white;
+}
 
-        header h2 {
-            color: #a78bfa;
-        }
+:root {
+    --purple: #a855f7;
+    --light: #c084fc;
+    --card: #151329;
+}
 
-        .main {
-            padding: 100px 20px;
-        }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,8,22,0.95);
+    border-bottom: 1px solid #292044;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        h1 {
-            font-size: 45px;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--light);
+}
 
-        span {
-            color: #a78bfa;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
 
-        p {
-            color: #cbd5e1;
-            font-size: 18px;
-            line-height: 1.8;
-        }
+nav a:hover {
+    color: var(--light);
+}
 
-        .button {
-            display: inline-block;
-            background: #7c3aed;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
+section {
+    padding: 100px 10%;
+    scroll-margin-top: 70px;
+}
 
-        section {
-            padding: 50px 20px;
-        }
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, #21133c, #080816 65%);
+}
 
-        footer {
-            padding: 25px;
-            background: #151b30;
-            color: #aaa;
-        }
-    </style>
+.avatar {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    border: 4px solid #d8b4fe;
+    box-shadow: 0 0 35px #9333ea;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--light);
+}
+
+.hero p {
+    color: #bbb;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: var(--purple);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #7e22ce;
+    transform: translateY(-4px);
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--light);
+    margin-bottom: 45px;
+}
+
+.about {
+    text-align: center;
+    line-height: 2;
+    color: #ccc;
+    max-width: 750px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 30px;
+    border: 1px solid #34234f;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+    box-shadow: 0 0 20px #7e22ce33;
+}
+
+.card h3 {
+    color: var(--light);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.7;
+}
+
+.contact {
+    text-align: center;
+    line-height: 2.5;
+}
+
+.contact a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #111024;
+    color: #888;
+}
+
+#top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--purple);
+    color: white;
+    padding: 13px 17px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 75px 7%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h2>MY PERSONAL WEBSITE</h2>
-    </header>
+<header>
+    <div class="logo">CATNHAT.DEV</div>
 
-    <div class="main">
-        <h1>Xin chào! Mình là <span>Cát Nhật</span></h1>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <div class="avatar">CN</div>
+
+        <h1>Xin chào, mình là <span>Cát Nhật</span></h1>
 
         <p>
-            Chào mừng bạn đến với website cá nhân của mình.<br>
-            Mình là sinh viên Công nghệ thông tin.<br>
-            Mình yêu thích lập trình và công nghệ.
+            Sinh viên Công nghệ thông tin<br>
+            Đam mê lập trình và phát triển công nghệ.<br>
+            Chào mừng bạn đến với website cá nhân của mình!
         </p>
 
-        <a href="#about" class="button">Tìm hiểu về mình</a>
+        <a href="#about" class="btn">Khám phá thêm</a>
     </div>
+</section>
 
-    <section id="about">
-        <h2>Giới thiệu bản thân</h2>
-        <p>
-            Đây là nơi mình chia sẻ những kiến thức,
-            kỹ năng và dự án lập trình của bản thân.
+<section id="about">
+    <h2 class="title">Giới thiệu bản thân</h2>
+
+    <div class="about">
+        Xin chào! Mình là Cát Nhật, hiện đang học
+        Công nghệ thông tin.
+
+        Mình yêu thích lập trình, công nghệ,
+        phát triển phần mềm và thiết kế website.
+
+        Mục tiêu của mình là trở thành một
+        lập trình viên chuyên nghiệp.
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="title">Kỹ năng của mình</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>C++</h3>
+            <p>Lập trình hướng đối tượng và phát triển phần mềm.</p>
+        </div>
+
+        <div class="card">
+            <h3>C#</h3>
+            <p>Lập trình ứng dụng và phát triển game Unity.</p>
+        </div>
+
+        <div class="card">
+            <h3>HTML & CSS</h3>
+            <p>Xây dựng giao diện website.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Tạo chức năng và tương tác cho website.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="title">Dự án của mình</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Hotel Management</h3>
+            <p>Phần mềm quản lý khách sạn bằng C++ và OOP.</p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Website</h3>
+            <p>Website cá nhân được xây dựng bằng HTML, CSS và JavaScript.</p>
+        </div>
+
+        <div class="card">
+            <h3>Game Development</h3>
+            <p>Tìm hiểu và phát triển game bằng Unity.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="title">Lĩnh vực quan tâm</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Thiết kế và phát triển website.</p>
+        </div>
+
+        <div class="card">
+            <h3>Software Development</h3>
+            <p>Xây dựng phần mềm và ứng dụng.</p>
+        </div>
+
+        <div class="card">
+            <h3>Game Development</h3>
+            <p>Phát triển game và ứng dụng giải trí.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="title">Liên hệ với mình</h2>
+
+    <div class="contact">
+        <p>GitHub:
+            <a href="https://github.com/nguyencatnhat" target="_blank">
+                github.com/nguyencatnhat
+            </a>
         </p>
-    </section>
 
-    <footer>
-        © 2026 Cát Nhật - Website cá nhân
-    </footer>
+        <p>Email: Bạn hãy cập nhật email của mình tại đây.</p>
+
+        <p>Facebook: Thêm đường link Facebook của bạn.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Cát Nhật | Personal Portfolio
+</footer>
+
+<a href="#home" id="top">↑</a>
 
 </body>
 </html>
-
