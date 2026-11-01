@@ -514,6 +514,12 @@ p {
     min-width: 0;
 }
 
+.project-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .project-image {
     position: relative;
     overflow: hidden;
