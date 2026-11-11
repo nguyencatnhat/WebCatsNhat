@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV Nguyễn Cát Nhật — Intern Developer">
+  <title>Nguyễn Cát Nhật — CV Intern Developer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172b35;
+      --muted: #526570;
+      --accent: #127568;
+      --line: #dbe5e4;
+      --paper: #fff;
+      --side: #f0f6f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8eeed;
+      color: var(--ink);
+      font: 10pt/1.38 "Aptos", "Segoe UI", Arial, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 18px auto;
+      padding: 11mm 12mm 10mm;
+      background: var(--paper);
+      box-shadow: 0 8px 32px #172b351c;
+    }
+    header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--accent);
+    }
+    .name {
+      margin: 0;
+      font-size: 28pt;
+      line-height: 1;
+      letter-spacing: -.8px;
+    }
+    .role {
+      margin: 7px 0 0;
+      color: var(--accent);
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+    .contact {
+      max-width: 90mm;
+      color: var(--muted);
+      font-size: 8.5pt;
+      line-height: 1.55;
+      text-align: right;
+    }
+    .contact div + div { margin-top: 2px; }
+    .contact a { color: var(--ink); }
+    .layout {
+      display: grid;
+      grid-template-columns: 61mm 1fr;
+      gap: 8mm;
+      padding-top: 8mm;
+    }
+    aside {
+      padding: 6mm;
+      background: var(--side);
+    }
+    main { min-width: 0; }
+    section { margin: 0 0 6mm; }
+    h2 {
+      margin: 0 0 2.5mm;
+      color: var(--accent);
+      font-size: 10pt;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    p { margin: 0; }
+    .summary { color: #344a54; font-size: 9.5pt; }
+    .school { font-weight: 700; }
+    .detail { margin-top: 1mm; color: var(--muted); font-size: 9pt; }
+    .skill-group + .skill-group { margin-top: 3mm; }
+    .skill-label { font-weight: 700; }
+    .skill-items { margin-top: .5mm; color: #40545d; font-size: 9pt; }
+    .project {
+      padding: 0 0 4mm;
+      margin: 0 0 4mm;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+    .project:last-child { padding-bottom: 0; margin-bottom: 0; border: 0; }
+    .project-title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1mm 4mm;
+    }
+    h3 { margin: 0; font-size: 11pt; line-height: 1.25; }
+    .project-link { color: var(--accent); font-size: 8pt; font-weight: 600; }
+    .tech { margin: 1mm 0 1.5mm; color: var(--muted); font-size: 8.25pt; }
+    ul { margin: 0; padding-left: 4mm; }
+    li { margin: 0 0 .7mm; color: #344a54; font-size: 8.8pt; }
+    .english { color: #344a54; font-size: 9pt; }
+    @media screen {
+      .page { min-height: 297mm; }
+    }
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 0;
+        margin: 0;
+        padding: 11mm 12mm 10mm;
+        box-shadow: none;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1 class="name">Nguyễn Cát Nhật</h1>
+        <p class="role">Intern Developer</p>
+      </div>
+      <div class="contact">
+        <div>Bình Thạnh, TP. Hồ Chí Minh</div>
+        <div><a href="tel:+84918811752">0918 811 752</a> · <a href="mailto:nguyencatnhat7777@gmail.com">nguyencatnhat7777@gmail.com</a></div>
+        <div><a href="https://catnhat.pages.dev">Portfolio</a> · <a href="https://github.com/nguyencatnhat">GitHub</a> · <a href="https://linkedin.com/in/catsnhat">LinkedIn</a></div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <section>
+          <h2>Học vấn</h2>
+          <p class="school">Trường Cao đẳng Văn Lang Sài Gòn</p>
+          <p class="detail">Công nghệ thông tin<br>2023 – 2025</p>
+        </section>
+
+        <section>
+          <h2>Kỹ năng</h2>
+          <div class="skill-group">
+            <p class="skill-label">Ngôn ngữ</p>
+            <p class="skill-items">Java · C# · C++ · Python · JavaScript</p>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Web</p>
+            <p class="skill-items">HTML · CSS · React.js</p>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">Cơ sở dữ liệu</p>
+            <p class="skill-items">MySQL · SQL Server</p>
+          </div>
+          <div class="skill-group">
+            <p class="skill-label">API & công cụ</p>
+            <p class="skill-items">RESTful API · Git · GitHub · VS Code · Cloudflare Pages</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Ngoại ngữ</h2>
+          <p class="english"><strong>Tiếng Anh:</strong> Cơ bản; đọc hiểu tài liệu kỹ thuật đơn giản.</p>
+        </section>
+      </aside>
+
+      <main>
+        <section>
+          <h2>Tóm tắt</h2>
+          <p class="summary">Tân cử nhân Công nghệ thông tin định hướng phát triển phần mềm và web. Có nền tảng Java, C#, JavaScript, React.js và cơ sở dữ liệu MySQL, SQL Server; đã tự xây dựng website và ứng dụng quản lý. Chủ động học hỏi, giao tiếp rõ ràng và phối hợp nhóm tốt.</p>
+        </section>
+
+        <section>
+          <h2>Dự án tiêu biểu</h2>
+          <article class="project">
+            <div class="project-title">
+              <h3>Hotel Management</h3>
+              <a class="project-link" href="https://github.com/nguyencatnhat/Hotel">GitHub ↗</a>
+            </div>
+            <p class="tech">C++ · HTML · CSS · JavaScript · REST API</p>
+            <ul>
+              <li>Xây dựng ứng dụng quản lý khách sạn với không gian đăng nhập riêng cho quản trị viên và khách hàng.</li>
+              <li>Quản lý phòng, khách hàng, đặt phòng, dịch vụ, hóa đơn và thanh toán; liên kết dịch vụ đã chọn với đặt phòng và tổng hóa đơn.</li>
+              <li>Lưu trữ dữ liệu ứng dụng bằng tệp và cung cấp giao diện web để thao tác các chức năng.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-title">
+              <h3>Website Xưởng Tre Cát Nhật</h3>
+              <a class="project-link" href="https://xuongtrecatnhat.pages.dev">Website ↗</a>
+            </div>
+            <p class="tech">HTML · CSS · JavaScript · GitHub · Cloudflare Pages</p>
+            <ul>
+              <li>Thiết kế website giới thiệu xưởng với các mục sản phẩm, thi công, hình ảnh và liên hệ.</li>
+              <li>Xây dựng danh mục sản phẩm có tìm kiếm, lọc theo nhóm và xem ảnh; tích hợp liên kết gọi điện để khách hỏi thông tin.</li>
+              <li>Đưa website lên Internet bằng Cloudflare Pages; mã nguồn tại <a class="project-link" href="https://github.com/nguyencatnhat/XuongTreCatNhat">GitHub ↗</a>.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-title">
+              <h3>Website cá nhân — WebCatsNhat</h3>
+              <a class="project-link" href="https://catnhat.pages.dev">Website ↗</a>
+            </div>
+            <p class="tech">HTML · CSS · JavaScript · GitHub · Cloudflare Pages</p>
+            <ul>
+              <li>Xây dựng portfolio giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ.</li>
+              <li>Quản lý mã nguồn bằng Git/GitHub và triển khai trên Cloudflare Pages; mã nguồn tại <a class="project-link" href="https://github.com/nguyencatnhat/WebCatsNhat">GitHub ↗</a>.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </article>
+</body>
+</html>
